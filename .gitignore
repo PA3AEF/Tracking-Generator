@@ -1,0 +1,106 @@
+# -----------------------------
+# KiCad (v6/v7/v8)
+# -----------------------------
+*.bak
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+
+# KiCad autosave
+*.tmp
+*-save.kicad_pcb
+*-save.kicad_sch
+
+# KiCad generated files
+*.net
+*.xml
+*.dcm
+*.cmp
+*.cache.lib
+*.kicad_pcb-bak
+fp-info-cache
+
+# KiCad fabrication output
+*.gbr
+*.gtl
+*.gbl
+*.gts
+*.gbs
+*.gto
+*.gbo
+*.drl
+*.pos
+*.zip
+
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints/
+.venv/
+env/
+venv/
+
+# -----------------------------
+# Jupyter Notebooks
+# -----------------------------
+.ipynb_checkpoints/
+*.nbconvert/
+
+# -----------------------------
+# VS Code
+# -----------------------------
+.vscode/
+.history/
+
+# -----------------------------
+# OS junk
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Simulation / RF tools
+# -----------------------------
+*.s2p
+*.s1p
+*.touchstone
+*.raw
+*.log
+*.ac
+*.tr
+*.fft
+*.sw0
+*.sw1
+*.sw2
+*.sw3
+
+# -----------------------------
+# Generated documentation
+# -----------------------------
+*.pdf
+*.html
+
+# -----------------------------
+# Build artefacts
+# -----------------------------
+build/
+dist/
+out/
+temp/
+tmp/
