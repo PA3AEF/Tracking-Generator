@@ -28,7 +28,7 @@ reference input.
 ## LO Chains
 
 Detailed LO chain documentation:  
-`docs/rf-design/lo-chains/`
+- **`docs/rf-design/lo-chains/`**
 
 ---
 
@@ -52,13 +52,3 @@ Detailed LO chain documentation:
 6. Test reference input operation
 
 ---
-
-## File Structure
-
-lo-board/
-├── schematic.pdf
-├── pcb/
-├── bom.csv
-└── readme.md
-
-

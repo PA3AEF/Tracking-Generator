@@ -25,7 +25,7 @@ HMC219 IF Out → Pad → IF Amplifier → 3 GHz LPF → Output Pad → SMA Out
 ## Gain Budget
 
 See:  
-`docs/rf-design/gain-budgets/baseband.md`
+- **`docs/rf-design/gain-budgets/baseband.md`**
 
 ---
 
@@ -48,12 +48,3 @@ See:
 5. Validate isolation and return loss
 
 ---
-
-## File Structure
-
-baseband/
-├── schematic.pdf
-├── pcb/
-├── bom.csv
-└── readme.md
-

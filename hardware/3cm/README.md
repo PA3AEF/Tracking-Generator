@@ -24,7 +24,7 @@ IF In → Pad → HMC220 Mixer → BPF (8–12 GHz) → RF Amplifier → Output 
 ## Gain Budget
 
 See:  
-`docs/rf-design/gain-budgets/3cm.md`
+- **`docs/rf-design/gain-budgets/3cm.md`**
 
 ---
 
@@ -50,11 +50,5 @@ See:
 
 ---
 
-## File Structure
 
-3cm/
-├── schematic.pdf
-├── pcb/
-├── bom.csv
-└── readme.md
 

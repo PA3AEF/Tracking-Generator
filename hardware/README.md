@@ -1,3 +1,20 @@
+# Hardware — TG Project
+
+This directory contains all hardware designs for the modular Tracking Generator (TG).  
+Each RF module is fully self‑contained with its own schematic, PCB layout, BOM, and test notes.
+
+The hardware is organized into four primary modules:
+
+- **Baseband Module (0–2.9 GHz)**
+- **6 cm Module (4.3–7.2 GHz)**
+- **3 cm Module (8.8–11.7 GHz)**
+- **LO Board (central PLLs + 10 MHz reference)**
+
+All PCBs are designed in KiCad and stored in separate subdirectories.
+
+---
+
+## Directory Structure
 
 Each module directory contains:
 
@@ -53,5 +70,6 @@ Each module directory contains:
 
 Gain budgets for all modules are located in:
 
-docs/rf-design/gain-budgets/
+- **`docs/rf-design/gain-budgets/`**
+
 

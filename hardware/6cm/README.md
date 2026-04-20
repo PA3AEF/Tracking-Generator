@@ -50,11 +50,4 @@ See:
 
 ---
 
-## File Structure
-
-6cm/
-├── schematic.pdf
-├── pcb/
-├── bom.csv
-└── readme.md
 
