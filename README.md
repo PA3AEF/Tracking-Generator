@@ -1,6 +1,7 @@
 # TG‑Project — Modular RF Tracking Generator
 
-This project builds a modulair Tracking Generator for my HP8562A Spectrum Analyser (22GHz). It consists of three RF-modules 
+This project builds a modulair Tracking Generator for my HP8562A Spectrum Analyser (22GHz). 
+It consists of three RF-modules 
 
 - **Baseband module (0–2.9 GHz)**
 - **6 cm module (4.3–7.2 GHz)**
