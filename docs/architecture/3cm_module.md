@@ -1,9 +1,9 @@
 # 3 cm Tracking Generator Module  
 **RF Output:** 9.5–11.5 GHz (2 GHz span)  
-**Harmonic Mode:** \( n = 3 \)  
+**Harmonic Mode:** n = 3  
 **Mixer Core:** HMC220  
 **TG LO:** ADF4351 (0.56–1.23 GHz)  
-**SA LO Path:** Doubled \( LO_{SA} \) (8.94–10.28 GHz)
+**SA LO Path:** Doubled `LO_SA` (8.94–10.28 GHz)
 
 ---
 
@@ -12,8 +12,8 @@
 The 3 cm module generates a tracking‑synchronous RF output in the 9.5–11.5 GHz range.  
 It follows the analyzer’s 3× harmonic mixing mode and derives all timing from:
 
-- \( V_{\text{sweep}} \)  
-- Analyzer \( LO_{SA} \) (fundamental)  
+- `V_sweep`  
+- Analyzer `LO_SA` (fundamental)  
 - 10 MHz reference
 
 The module uses a doubled analyzer LO as the high‑frequency LO for the mixer and an ADF4351 as the low‑frequency IF LO.  
@@ -25,33 +25,33 @@ The HMC220 produces the final RF output via the difference product.
 
 ### Analyzer‑derived quantities
 
-\( RF_{SA} = 2 \cdot V_{\text{sweep}} \)  
+`RF_SA = 2 * V_sweep`  
 
-\( IF_1 = 3.9107\ \text{GHz} \)
+`IF_1 = 3.9107 GHz`
 
 ### Analyzer LO (fundamental)
 
-\( LO_{SA} = \dfrac{RF_{SA} + IF_1}{3} \)
+`LO_SA = (RF_SA + IF_1) / 3`
 
 ### Doubled LO for HMC220 LO port
 
-\( LO_2 = 2 \cdot LO_{SA} \)
+`LO_2 = 2 * LO_SA`
 
-For \( RF_{SA} = 9.5\text{–}11.5\ \text{GHz} \) &rarr;  \( LO_2 \approx 8.94\text{–}10.28\ \text{GHz} \)
+For `RF_SA = 9.5–11.5 GHz` → `LO_2 ≈ 8.94–10.28 GHz`
 
 ### TG IF LO (ADF4351)
 
-The mixer uses the difference product \( RF_{TG} = LO_2 - IF_{TG} \).  
+The mixer uses the difference product `RF_TG = LO_2 - IF_TG`.  
 
-Tracking requires \( RF_{TG} = RF_{SA} \).
+Tracking requires `RF_TG = RF_SA`.
 
-Therefore \( IF_{TG} = LO_2 - RF_{SA} \).
+Therefore `IF_TG = LO_2 - RF_SA`.
 
-Substituting \( LO_2 \) &rarr;    \( IF_{TG} = \dfrac{2(RF_{SA} + IF_1)}{3} - RF_{SA} \)
+Substituting `LO_2` → `IF_TG = (2 * (RF_SA + IF_1)) / 3 - RF_SA`
 
-Simplified &rarr;  \( IF_{TG} = \dfrac{2IF_1 - RF_{SA}}{3} \)
+Simplified → `IF_TG = (2 * IF_1 - RF_SA) / 3`
 
-Range &rarr;  \( IF_{TG} \approx 0.56\text{–}1.23\ \text{GHz} \)
+Range → `IF_TG ≈ 0.56–1.23 GHz`
 
 This is the ADF4351 output frequency.
 
@@ -140,14 +140,14 @@ This is the ADF4351 output frequency.
 
 ### Inputs to MCU (Raspi PICO)
 
-- \( V_{\text{sweep}} \) (ADC)  
+- `V_sweep` (ADC)  
 - 10 MHz reference  
 - Band select
 
 ### MCU responsibilities
 
-- Compute \( RF_{SA} = 2 \cdot V_{\text{sweep}} \)  
-- Compute \( IF_{TG} = \dfrac{2IF_1 - RF_{SA}}{3} \)  
+- Compute `RF_SA = 2 * V_sweep`  
+- Compute `IF_TG = (2 * IF_1 - RF_SA) / 3`  
 - Program ADF4351 via SPI  
 - Manage LO enable/mute  
 - Provide calibration hooks
@@ -163,7 +163,7 @@ This is the ADF4351 output frequency.
 ## Calibration notes
 
 - Amplitude flatness over 2 GHz span corrected via output pad/EQ.  
-- \( LO_2 \) level set by fixed‑gain amplifier.  
+- `LO_2` level set by fixed‑gain amplifier.  
 - ADF4351 spur performance acceptable due to low IF offset.  
 - Mixer conversion loss measured per module and stored in calibration table.
 
@@ -172,6 +172,6 @@ This is the ADF4351 output frequency.
 ## Mechanical / layout notes
 
 - Doubler → LO amp → HMC220 LO path are short and shielded.  
-- Maintain isolation between \( LO_2 \) and RF output.  
+- Maintain isolation between `LO_2` and RF output.  
 - ADF4351 IF routing needs a clean 50 ohm but is not microwave‑critical.  
-- Fine tune attenuator pads for correct levels at \( LO_2 \), \( IF_{TG} \), and \( RF_{TG} \).  
+- Fine tune attenuator pads for correct levels at `LO_2`, `IF_TG`, and `RF_TG`.
