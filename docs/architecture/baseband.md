@@ -1,3 +1,6 @@
+
+---
+
 # Base‑Band Tracking Generator Module  
 **RF Output:** 0–2.9 GHz  
 **Mixer Core:** HMC219  

@@ -1,8 +1,12 @@
+
+---
+
 # 3 cm Tracking Generator Module  
 **RF Output:** 9.5–11.5 GHz (2 GHz span)  
 **Harmonic Mode:** n = 3  
 **Mixer Core:** HMC220  
-**TG LO:** ADF4351 (0.56–1.23 GHz)  
+**TG LO:** ADF4351 (0.56–1.23 GHz)
+**Reference:** 10 MHZ from spectrum analysers  
 **SA LO Path:** Doubled `LO_SA` (8.94–10.28 GHz)
 
 ---
