@@ -217,7 +217,7 @@ The TG is therefore a **frequency reconstruction engine**, not a simple swept os
 - `mechanical/` — CNC enclosures, front panels, 3D models
 - `scripts/` — measurement and calibration scripts
 
-# 11. License
+# License
 
 MIT License.  
 See LICENSE file for details.
